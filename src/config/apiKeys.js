@@ -4,7 +4,7 @@ export const API_KEYS = {
     DREAM_STUDIO: "sk-5fuYhJjjmTCwnwyGrELI9KZkaxNv9rLYaA8r3STdi4RK56Jd", 
     
     // Image Enhancement API Key (existing)
-    IMAGE_ENHANCEMENT: "sk-5fuYhJjjmTCwnwyGrELI9KZkaxNv9rLYaA8r3STdi4RK56Jd"
+    IMAGE_ENHANCEMENT: "wxefqkg9q4mjswyn7"
 };
 
 // API Base URLs
