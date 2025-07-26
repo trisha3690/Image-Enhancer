@@ -23,14 +23,14 @@ const Home = () => {
     };
 
     return (
-        <>
+        <div className="space-y-8">
             <ImageUpload UploadImageHandler={UploadImageHandler} />
             <ImagePreview
                 loading={loading}
                 uploaded={uploadImage}
                 enhanced={enhancedImage?.image}
             />
-        </>
+        </div>
     );
 };
 

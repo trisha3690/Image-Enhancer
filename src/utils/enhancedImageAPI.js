@@ -1,7 +1,7 @@
 
 import axios from "axios";
-const API_KEY = import.meta.env.MY_API_KEY; 
-const BASE_URL = "https://techhk.aoscdn.com/";
+import { API_KEYS, API_URLS } from "../config/apiKeys";
+
 const MAXIMUM_RETRIES = 20;
 
 export const enhancedImageAPI = async (file) => {
@@ -23,12 +23,12 @@ const uploadImage = async (file) => {
     formData.append("image_file", file);
 
     const { data } = await axios.post(
-        `${BASE_URL}/api/tasks/visual/scale`,
+        `${API_URLS.IMAGE_ENHANCEMENT}/api/tasks/visual/scale`,
         formData,
         {
             headers: {
                 "Content-Type": "multipart/form-data",
-                "X-API-KEY": API_KEY,
+                "X-API-KEY": API_KEYS.IMAGE_ENHANCEMENT,
             },
         }
     );
@@ -61,10 +61,10 @@ const PollForEnhancedImage = async (taskId, retries = 0) => {
 
 const fetchEnhancedImage = async (taskId) => {
     const { data } = await axios.get(
-        `${BASE_URL}/api/tasks/visual/scale/${taskId}`,
+        `${API_URLS.IMAGE_ENHANCEMENT}/api/tasks/visual/scale/${taskId}`,
         {
             headers: {
-                "X-API-KEY": API_KEY,
+                "X-API-KEY": API_KEYS.IMAGE_ENHANCEMENT,
             },
         }
     );
